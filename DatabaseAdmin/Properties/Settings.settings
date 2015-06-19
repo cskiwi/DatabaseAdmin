@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BadmintonHubAdmin.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DatabaseAdmin.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="Location" Type="System.String" Scope="User">
@@ -15,10 +15,10 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="WorkingDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\wamp\www\Badmintonhub</Value>
     </Setting>
     <Setting Name="PhpDir" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">C:\wamp\bin\php\php5.5.12\php.exe</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -17,7 +17,7 @@
         </ListBox>
         <Grid Grid.Column="0" Margin="10,10,10,306">
             <Label Content="Location" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.154"
-				Margin="4,37,0,0" />
+				Margin="0,37,0,0" />
             <TextBox x:Name="DatabaseLocation" HorizontalAlignment="Left" Height="23" Margin="79,40,0,0" TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=Location, Mode=TwoWay}"
 				VerticalAlignment="Top" Width="120" />
             <Label Content="Database" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.154"

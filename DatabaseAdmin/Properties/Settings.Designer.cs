@@ -73,7 +73,7 @@ namespace DatabaseAdmin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wamp\\www\\Badmintonhub")]
         public string WorkingDir {
             get {
                 return ((string)(this["WorkingDir"]));
@@ -85,7 +85,7 @@ namespace DatabaseAdmin.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\wamp\\bin\\php\\php5.5.12\\php.exe")]
         public string PhpDir {
             get {
                 return ((string)(this["PhpDir"]));
