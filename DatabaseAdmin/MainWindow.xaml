@@ -1,0 +1,52 @@
+﻿<Window x:Class="DatabaseAdmin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:p="clr-namespace:DatabaseAdmin.Properties" 
+        Title="Laravel Datbase Manager" Height="550" Width="950">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="Logbox" Grid.Column="1">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel VerticalAlignment="Bottom" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <Grid Grid.Column="0" Margin="10,10,10,306">
+            <Label Content="Location" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.154"
+				Margin="4,37,0,0" />
+            <TextBox x:Name="DatabaseLocation" HorizontalAlignment="Left" Height="23" Margin="79,40,0,0" TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=Location, Mode=TwoWay}"
+				VerticalAlignment="Top" Width="120" />
+            <Label Content="Database" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.154"
+				Margin="0,77,0,0" />
+            <TextBox x:Name="DatabaseName" HorizontalAlignment="Left" Height="23" Margin="79,80,0,0" TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=Database, Mode=TwoWay}"
+				VerticalAlignment="Top" Width="120" />
+
+            <Label Content="Username" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.154"
+				Margin="0,117,0,0" />
+            <TextBox x:Name="DatabaseUser" HorizontalAlignment="Left" Height="23" Margin="79,120,0,0" TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=Username, Mode=TwoWay}"
+				VerticalAlignment="Top" Width="120" />
+
+            <Label Content="Password" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.154"
+				Margin="0,157,0,0" />
+            <TextBox x:Name="DatabasePassword" HorizontalAlignment="Left" Height="23" Margin="79,160,0,0" TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=Password, Mode=TwoWay}"
+				VerticalAlignment="Top" Width="120" />
+            <Button Content="Reset Database" HorizontalAlignment="Left" Margin="4,0,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click"/>
+        </Grid>
+        <Grid Grid.Column="0" Margin="10,218,10,10">
+            <Label Content="Working dir" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="WorkingDir" HorizontalAlignment="Left" Height="23" Margin="0,31,0,0" TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=WorkingDir, Mode=TwoWay}" VerticalAlignment="Top" Width="280"/>
+            <Button x:Name="MigrateButton" Content="Migrate" HorizontalAlignment="Left" Margin="0,130,0,0" VerticalAlignment="Top" Width="75" Click="MigrateButton_Click" />
+            <Button x:Name="MigrateSeedButton" Content="Migrate --seed" HorizontalAlignment="Left"    Margin="0,155,0,0" VerticalAlignment="Top" Width="116" Click="MigrateSeedButton_Click"/>
+            <Button x:Name="MigrateRefreshButton" Content="Migrate:refresh" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,180,0,0" Width="116" Click="MigrateRefreshButton_Click" />
+            <Button x:Name="MigrateRefreshSeedButton" Content="Migrate:refresh --seed" HorizontalAlignment="Left" Margin="0,205,0,0"  VerticalAlignment="Top" Width="155" Click="MigrateRefreshSeedButton_Click" />
+            <Button x:Name="SeedButton" Content="Db:seed" HorizontalAlignment="Left" Margin="0,230,0,0" VerticalAlignment="Top" Width="75" Click="SeedButton_Click"/>
+            <Button x:Name="ComposerDumpAutoloadButton" Content="Composer DumpAutoload" HorizontalAlignment="Left" Margin="0,255,0,0" VerticalAlignment="Top" Width="175" Click="ComposerDumpAutoloadButton_Click"/>
+            <Label Content="Php dir" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,58,0,0"/>
+            <TextBox x:Name="PhpDir" HorizontalAlignment="Left" Height="23" Margin="0,89,0,0" TextWrapping="Wrap" Text="{Binding Source={x:Static p:Settings.Default}, Path=PhpDir, Mode=TwoWay}" VerticalAlignment="Top" Width="280"/>
+        </Grid>
+    </Grid>
+</Window>
